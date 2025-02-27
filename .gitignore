@@ -1,0 +1,17 @@
+# Ігноруємо системні файли macOS
+.DS_Store
+Library/
+Application Support/
+Caches/
+.Trash/
+# Ігнорування системних файлів
+.DS_Store
+*.log
+*.lock
+
+# Кеш і тимчасові файли
+.cache/
+.gradle/
+.idea/
+.vscode/
+node_modules/
