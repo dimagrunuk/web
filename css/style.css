@@ -51,7 +51,7 @@ nav ul li a:hover {
     margin-bottom: 20px;
 }
 
-/* Кнопка "Отримати загадку" */
+/* Кнопка */
 button {
     background: #f39c12;
     color: white;
@@ -60,10 +60,20 @@ button {
     font-size: 18px;
     cursor: pointer;
     transition: background 0.3s;
+    border-radius: 5px;
 }
 
 button:hover {
     background: #e67e22;
+}
+
+/* Анімація для появи загадки */
+#mysteryDisplay {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    font-size: 18px;
+    margin-top: 15px;
+    color: #f1c40f;
 }
 
 /* Адаптивність */
@@ -85,14 +95,9 @@ button:hover {
         font-size: 16px;
         padding: 8px 16px;
     }
-}/* Анімація для появи загадки */
-#mysteryDisplay {
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-    font-size: 18px;
-    margin-top: 15px;
-    color: #f1c40f;
-}/* Сторінка "Про нас" */
+}
+
+/* Сторінка "Про нас" */
 .about {
     max-width: 800px;
     margin: 40px auto;
@@ -125,10 +130,13 @@ button:hover {
     font-size: 18px;
     margin: 5px 0;
     color: #f1c40f;
-}.services {
-     text-align: center;
-     padding: 30px;
- }
+}
+
+/* Категорії */
+.services {
+    text-align: center;
+    padding: 30px;
+}
 
 .services h1 {
     font-size: 2.5rem;
@@ -142,6 +150,8 @@ button:hover {
     margin: 15px auto;
     max-width: 600px;
     border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
 }
 
 .category h2 {
@@ -153,16 +163,14 @@ button:hover {
 }
 
 .category button {
-    background: #ffa530;
-    color: #000;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
     margin-top: 10px;
-}.gallery {
-     text-align: center;
-     padding: 30px;
- }
+}
+
+/* Галерея */
+.gallery {
+    text-align: center;
+    padding: 30px;
+}
 
 .gallery h1 {
     font-size: 2.5rem;
@@ -187,4 +195,35 @@ button:hover {
 
 .gallery-container img:hover {
     transform: scale(1.1);
+}
+
+/* Контакти */
+.contact {
+    text-align: center;
+    margin-top: 20px;
+    color: #f3a531;
+}
+
+form {
+    max-width: 400px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+button {
+    background-color: #f3a531;
+    color: black;
+}
+
+button:hover {
+    background-color: #d88b1e;
 }
