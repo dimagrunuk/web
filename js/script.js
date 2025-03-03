@@ -1,15 +1,16 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const mysteryButton = document.getElementById("getMystery");
-    const mysteryDisplay = document.getElementById("mysteryDisplay");
+    const button = document.getElementById("getMystery");
+    const display = document.getElementById("mysteryDisplay");
 
-    const mysteries = [
-        "Що завжди йде, але ніколи не приходить? (Час)",
+    const riddles = [
         "Що має ключі, але не може відкрити жодні двері? (Клавіатура)",
-        "Що можна розбити, навіть не торкаючись? (Обіцянка)"
+        "Що завжди попереду, але ніколи не досягається? (Майбутнє)",
+        "Що може наповнювати кімнату, але не займає місця? (Світло)"
     ];
 
-    mysteryButton.addEventListener("click", function() {
-        const randomIndex = Math.floor(Math.random() * mysteries.length);
-        mysteryDisplay.textContent = mysteries[randomIndex];
+    button.addEventListener("click", function() {
+        let randomRiddle = riddles[Math.floor(Math.random() * riddles.length)];
+        display.textContent = randomRiddle;
+        display.style.opacity = "1";
     });
 });

@@ -1,43 +1,190 @@
+/* Загальні стилі */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    text-align: center;
-    background-color: #1e1e2e;
+    background: #121212;
     color: white;
+}
+
+/* Навігаційне меню */
+nav {
+    background: #1e1e1e;
+    padding: 10px 20px;
+    text-align: center;
 }
 
 nav ul {
     list-style: none;
-    padding: 10px;
-    background-color: #333;
-    display: flex;
-    justify-content: center;
+    padding: 0;
 }
 
 nav ul li {
+    display: inline;
     margin: 0 15px;
 }
 
 nav ul li a {
-    color: white;
+    color: #ffffff;
     text-decoration: none;
     font-size: 18px;
+    transition: color 0.3s;
 }
 
+nav ul li a:hover {
+    color: #f39c12;
+}
+
+/* Головний блок */
 .hero {
-    padding: 50px;
+    text-align: center;
+    padding: 80px 20px;
 }
 
+.hero h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Кнопка "Отримати загадку" */
 button {
-    background-color: #ffcc00;
-    border: none;
+    background: #f39c12;
+    color: white;
     padding: 10px 20px;
+    border: none;
     font-size: 18px;
     cursor: pointer;
-    margin-top: 20px;
+    transition: background 0.3s;
 }
 
 button:hover {
-    background-color: #ff9900;
+    background: #e67e22;
+}
+
+/* Адаптивність */
+@media (max-width: 600px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .hero {
+        padding: 50px 10px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+}/* Анімація для появи загадки */
+#mysteryDisplay {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    font-size: 18px;
+    margin-top: 15px;
+    color: #f1c40f;
+}/* Сторінка "Про нас" */
+.about {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.about h1 {
+    font-size: 32px;
+    color: #f39c12;
+}
+
+.about h2 {
+    font-size: 24px;
+    margin-top: 20px;
+    color: #e67e22;
+}
+
+.about p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.about ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about ul li {
+    font-size: 18px;
+    margin: 5px 0;
+    color: #f1c40f;
+}.services {
+     text-align: center;
+     padding: 30px;
+ }
+
+.services h1 {
+    font-size: 2.5rem;
+    color: #ffa530;
+    margin-bottom: 20px;
+}
+
+.category {
+    background: #222;
+    padding: 20px;
+    margin: 15px auto;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+.category h2 {
+    color: #ffa530;
+}
+
+.category p {
+    color: #d1d1d1;
+}
+
+.category button {
+    background: #ffa530;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}.gallery {
+     text-align: center;
+     padding: 30px;
+ }
+
+.gallery h1 {
+    font-size: 2.5rem;
+    color: #ffa530;
+    margin-bottom: 20px;
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.gallery-container img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-container img:hover {
+    transform: scale(1.1);
 }
